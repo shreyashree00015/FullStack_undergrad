@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="side-nav">
+            <img src="images/profile.jpg" alt="Your Photo" class="profile-pic">
+            <h2>Shreya Shree S</h2>
+            <p>AI/Data Enthusiast</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <!-- <li><a href="owner_login.html">Admin Login</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <footer>
+                <p>&copy; 2024 Always strive for more.</p>
+            </footer>
+        </nav>
+
+        <div class="main-content">
+            <section>
+                <h1>Admin Login</h1>
+                <form id="loginForm" class="login-form">
+                    <div>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" pattern="[A-Za-z0-9]{5,15}" 
+                               title="Username should be 5-15 characters long and contain only letters and numbers." required>
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one digit." required>
+                        <div id="passwordStrength">
+                            <div id="strengthBar"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" id="adminLoginButton">Admin Login</button>
+                    </div>
+                    
+                </form>
+                <div id="loginMessage"></div>
+
+            </section>
+            
+            
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

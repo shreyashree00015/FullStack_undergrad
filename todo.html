@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Side Navigation -->
+        <nav class="side-nav">
+            <img src="images/profile.jpg" alt="Your Photo" class="profile-pic">
+            <h2>Shreya Shree S</h2>
+            <p>AI/Data Enthusiast</p>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <!-- <li><a href="owner_login.html">Admin Login</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <footer>
+                <p>&copy; 2024 Always strive for more.</p>
+            </footer>
+        </nav>
+    <div class="todo-container">
+    <h1>My To-Do List</h1>
+    <form id="taskForm">
+        <input type="text" id="taskDescription" placeholder="New task...<3" required>
+        <input type="date" id="taskDueDate" required>
+        <button type="submit">Add Task</button>
+    </form>
+    <div id="filter-buttons" style="display: flex; gap: 40px; margin-top: 20px;">
+        <div style="background-color: #e0bef7; padding: 10px; border: 2px solid #e0bef7; border-radius: 5px; box-shadow: 2px 2px 5px #0000001a;">
+            <button id="all" style="background: none; border: none; font-size: 16px; cursor: pointer;">All</button>
+        </div>
+        <div style="background-color: #c3e9fc; padding: 10px; border: 2px solid #c3e9fc; border-radius: 5px; box-shadow: 2px 2px 5px #0000001a;">
+            <button id="active" style="background: none; border: none; font-size: 16px; cursor: pointer;">Active</button>
+        </div>
+        <div style="background-color: #dcffbf; padding: 10px; border: 2px solid #dcffbf; border-radius: 5px; box-shadow: 2px 2px 5px #0000001a;">
+            <button id="completed" style="background: none; border: none; font-size: 16px; cursor: pointer;">Completed</button>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+        <img src="images/popup.jpeg" alt="Congratulations!">
+        <!-- <button id="closePopup">Close</button> -->
+    </div>
+    
+    <ul id="taskList"></ul>
+    <button id="clearCompleted">Clear Completed Tasks</button>
+
+</div>
+
+<script src="todo.js"></script>
+</body>
+</html>
